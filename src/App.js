@@ -62,21 +62,21 @@ export default function App() {
         <button
           className="addScore1"
           onClick={() => AddScore(1)}
-          disabled={score > 100}
+          disabled={wicket >= 12 || score > 100}
         >
           Add 1
         </button>
         <button
           className="addScore4"
           onClick={() => AddScore(4)}
-          disabled={score > 100}
+          disabled={wicket >= 12 || score > 100}
         >
           Add 4
         </button>
         <button
           className="addScore6"
           onClick={() => AddScore(6)}
-          disabled={score > 100}
+          disabled={wicket >= 12 || score > 100}
         >
           Add 6
         </button>
@@ -96,7 +96,10 @@ export default function App() {
       <div className="addBall">
         Add ball
         {/* Increase the total number of balls thrown here. */}
-        <button onClick={() => AddBall(1)} disabled={score > 100}>
+        <button
+          onClick={() => AddBall(1)}
+          disabled={wicket >= 12 || score > 100}
+        >
           Add 1
         </button>
       </div>
