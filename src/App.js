@@ -81,7 +81,9 @@ export default function App() {
         {/* Increase the total number of balls thrown here. */}
         <button onClick={() => AddBall(1)}>Add 1</button>
       </div>
-      <Result />
+      <div>
+        <h1>{score > 100 ? "India Won" : ""}</h1>
+      </div>
     </div>
   );
 }
