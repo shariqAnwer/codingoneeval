@@ -45,7 +45,7 @@ export default function App() {
           Over:{}
           <h1 className="overCount">
             {
-              Math.round(ball / 6) + "." + (ball % 6)
+              Math.ceil(ball / 6) + "." + (ball % 6)
 
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
