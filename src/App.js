@@ -1,5 +1,4 @@
 import React from "react";
-import Result from "./Result";
 import "./styles.css";
 
 export default function App() {
