@@ -59,13 +59,25 @@ export default function App() {
       <div className="addScore">
         Add Score
         {/* these buttons should add the respective amount in the score */}
-        <button className="addScore1" onClick={() => AddScore(1)}>
+        <button
+          className="addScore1"
+          onClick={() => AddScore(1)}
+          disabled={score > 100}
+        >
           Add 1
         </button>
-        <button className="addScore4" onClick={() => AddScore(4)}>
+        <button
+          className="addScore4"
+          onClick={() => AddScore(4)}
+          disabled={score > 100}
+        >
           Add 4
         </button>
-        <button className="addScore6" onClick={() => AddScore(6)}>
+        <button
+          className="addScore6"
+          onClick={() => AddScore(6)}
+          disabled={score > 100}
+        >
           Add 6
         </button>
       </div>
@@ -73,7 +85,10 @@ export default function App() {
       <div className="addWicket">
         Add Wicket
         {/* Increase the count of wicket */}
-        <button onClick={() => AddWicket(1)} disabled={wicket >= 12}>
+        <button
+          onClick={() => AddWicket(1)}
+          disabled={wicket >= 12 || score > 100}
+        >
           Add 1 wicket
         </button>
       </div>
@@ -81,7 +96,9 @@ export default function App() {
       <div className="addBall">
         Add ball
         {/* Increase the total number of balls thrown here. */}
-        <button onClick={() => AddBall(1)}>Add 1</button>
+        <button onClick={() => AddBall(1)} disabled={score > 100}>
+          Add 1
+        </button>
       </div>
       <div>
         <h1>{score > 100 ? "India Won" : ""}</h1>
