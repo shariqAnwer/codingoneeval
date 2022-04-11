@@ -19,13 +19,6 @@ export default function App() {
     setBall(ball + value);
   };
 
-  const stop = () => {
-    var btn = document.querySelector(".addWicket");
-    if (wicket > 12) {
-      disabled = true;
-    }
-  };
-
   return (
     <div className="App">
       <h3>India:</h3>
